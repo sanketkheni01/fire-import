@@ -1,0 +1,6 @@
+node_modules/
+dist
+assets/cover.afdesign
+yarn.lock
+package-lock.json
+firebaseExport
