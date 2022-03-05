@@ -1,7 +1,7 @@
 import { execute } from '@yarnpkg/shell'
+import chalk from 'chalk'
 import ora from 'ora'
 import prompt from 'prompt'
-import { chalk } from 'zx'
 
 async function firestore() {
   const { projectId } = await prompt.get(['projectId'])
