@@ -21,7 +21,7 @@ Importing **firestore** data to your current firebase project directory
 `fire-import firestore`
 
 It will ask you for `projectId`. Please go to the firebase console and get the project id.
-![alt text](https://github.com/sanketkheni01/fire-import/blob/master/assets/firebaseSetting.png.jpg?raw=true)
+![alt text](https://github.com/sanketkheni01/fire-import/blob/master/assets/firebaseSetting.png?raw=true)
 
 Then new browser windows will open. Choose your google account associated with firebase project.
 
