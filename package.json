@@ -1,12 +1,14 @@
 {
   "name": "fire-import",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Import your firebase data to your local firebase emulators",
   "main": "./dist/index.js",
   "scripts": {
     "test": "test",
     "watch": "tsc --watch",
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsc --watch && npm i -g",
+    "publish": "tsc && npm publish"
   },
   "author": "sanket kheni",
   "license": "MIT",

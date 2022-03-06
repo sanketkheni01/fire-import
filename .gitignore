@@ -4,3 +4,4 @@ assets/cover.afdesign
 yarn.lock
 package-lock.json
 firebaseExport
+.vscode/settings.json
