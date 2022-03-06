@@ -8,7 +8,7 @@ import {
   GCPLogin,
   setGCPProjectId,
   StartFirebaseEmulatorCommand,
-} from '../Constants/commands'
+} from '../Constants/commands.js'
 
 async function firestore() {
   // ? Get the firebase project_id
