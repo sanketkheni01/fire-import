@@ -1,6 +1,6 @@
 {
   "name": "fire-import",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Import your firebase data to your local firebase emulators",
   "main": "./dist/index.js",
   "scripts": {
