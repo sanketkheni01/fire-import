@@ -8,7 +8,7 @@
     "watch": "tsc --watch",
     "build": "tsc",
     "dev": "tsc --watch && npm i -g",
-    "publish": "tsc && npm publish"
+    "publish": "npm version patch && tsc && npm publish"
   },
   "author": "sanket kheni",
   "license": "MIT",
