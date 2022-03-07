@@ -34,7 +34,7 @@ async function firestore() {
     spinner.succeed('Import successful')
     console.log(chalk.yellowBright('FireStore data imported 🔥🔥🔥🎉🎉🎉'))
     console.log(
-      chalk.green('Run following command to import data to fireStore')
+      chalk.green('Run following command to import data to firebase emulator')
     )
     console.log(chalk.black.bgYellow(StartFirebaseEmulatorCommand))
     spinner.stop()
