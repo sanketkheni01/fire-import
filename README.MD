@@ -30,7 +30,7 @@ Then new browser windows will open. Choose your google account associated with f
 
 > :warning: Please make sure that you are in firebase project directory. Or initialize the firebase project by entering `firebase init` in terminal.
 
-## 1. Firebase Storage
+## 2. Firebase Storage
 
 ```
 fire-import storage
