@@ -6,7 +6,7 @@
 
 1. Google Cloud SDK
 
-   For installing google cloud in your computer check this out => [here](https://cloud.google.com/sdk/docs/install)
+   For installing google cloud cli in your computer check this out => [here](https://cloud.google.com/sdk/docs/install)
 
 2. Firebase cli
 
@@ -16,7 +16,7 @@
 
 # Usage
 
-## 1. Importing **firestore** data to your current firebase project directory
+## 1. FireStore
 
 ```
 fire-import firestore
@@ -30,7 +30,7 @@ Then new browser windows will open. Choose your google account associated with f
 
 > :warning: Please make sure that you are in firebase project directory. Or initialize the firebase project by entering `firebase init` in terminal.
 
-## 1. Importing **firebase storage** data to your current firebase project directory
+## 1. Firebase Storage
 
 ```
 fire-import storage
