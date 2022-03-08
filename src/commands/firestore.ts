@@ -8,7 +8,7 @@ import {
   GCPLogin,
   setGCPProjectId,
   StartFirebaseEmulatorCommand,
-} from '../Constants/commands.js'
+} from '../Constants/index.js'
 
 async function firestore() {
   // ? Get the firebase project_id
@@ -34,10 +34,11 @@ async function firestore() {
     spinner.succeed('Import successful')
     console.log(chalk.yellowBright('FireStore data imported 🔥🔥🔥🎉🎉🎉'))
     console.log(
-      chalk.green('Run following command to import data to fireStore')
+      chalk.green('Run following command to import data to firebase emulator')
     )
     console.log(chalk.black.bgYellow(StartFirebaseEmulatorCommand))
     spinner.stop()
+    // ! Remove firestore folder from the storage server
   } else {
     spinner.fail('Import failed')
   }
