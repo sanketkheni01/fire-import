@@ -16,19 +16,32 @@
 
 # Usage
 
-Importing **firestore** data to your current firebase project directory
+## 1. Importing **firestore** data to your current firebase project directory
 
 `fire-import firestore`
 
-It will ask you for `projectId`. Please go to the firebase console and get the project id.
-![alt text](https://github.com/sanketkheni01/fire-import/blob/master/assets/firebaseSetting.png?raw=true)
+It will ask you for `projectId`. How to get [Project Id](#project-id)?
 
 Then new browser windows will open. Choose your google account associated with firebase project.
 
 (This package won't have access to any of your account. You are providing access to `google-cloud-sdk` only)
 
-and then start the firebase emulator with
+> :warning: Please make sure that you are in firebase project directory. Or initialize the firebase project by entering `firebase init` in terminal.
+
+## 1. Importing **firebase storage** data to your current firebase project directory
+
+`fire-import storage`
+
+# FAQs
+
+## <a name="project-id"></a>How to get firebase project id?
+
+Please go to the firebase console and get the project id.
+
+![alt text](https://github.com/sanketkheni01/fire-import/blob/master/assets/firebaseSetting.png?raw=true)
+
+## How to start emulator?
+
+Start firebase emulator with
 
 `firebase emulators:start --import=./firebaseExport --export-on-exit=./firebaseExport`
-
-> :warning: Please make sure that you are in firebase project directory. Or initialize the firebase project by entering `firebase init` in terminal.

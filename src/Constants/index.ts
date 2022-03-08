@@ -10,10 +10,10 @@ export const setGCPProjectId = (projectId: string) =>
   `gcloud config set project ${projectId}`
 
 export const ExportFirestoreToBucket = (projectId: string) =>
-  `gcloud firestore export gs://${projectId}.appspot.com/firebaseExport`
+  `gcloud firestore export gs://${projectId}.appspot.com/firestore_export/`
 
 export const DownloadFolderFromBucket = (projectId: string) =>
-  `gsutil -m cp -r gs://${projectId}.appspot.com/firebaseExport .`
+  `gsutil -m cp -r gs://${projectId}.appspot.com/firestore_export ./firebaseExport/`
 
 export const getFirebaseExportPath = (path?: string) =>
   path ? `firebaseExport/${path}` : 'firebaseExport'
@@ -29,3 +29,6 @@ export const firebaseStorageMetadataPath =
   './firebaseExport/storage_export/metadata/'
 
 export const getGoogleAuthTokenCommand = 'gcloud auth print-access-token'
+
+export const deleteFireStoreFolderBucket = (projectId: string) =>
+  `gsutil rm -r gs://${projectId}.appspot.com/firestore_export/`

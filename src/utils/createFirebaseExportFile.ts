@@ -3,17 +3,16 @@ import { getFirebaseExportPath } from '../Constants/index.js'
 import execute from './execute.js'
 
 export default async function createFirebaseExportFile() {
+  // ! remove firebase storage and use this function only for creating file
   let firebaseObj = {
     version: null,
     storage: {
-      version: null,
       path: 'storage_export',
     },
   }
 
   await execute('firebase --version', function (output: any) {
     firebaseObj.version = output
-    firebaseObj.storage.version = output
   })
 
   if (!firebaseObj.version) {

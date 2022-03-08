@@ -7,14 +7,15 @@ import prompt from 'prompt'
 import {
   firebaseStorageBlobsPath,
   firebaseStorageMetadataPath,
-  getGoogleAuthTokenCommand,
   StartFirebaseEmulatorCommandAll,
 } from '../Constants/index.js'
 import createBucketFile from '../utils/createBucketFile.js'
 import createFirebaseExportFile from '../utils/createFirebaseExportFile.js'
 import execute from '../utils/execute.js'
+import handleGCPLogin from '../utils/handleGCPLogin.js'
 import modifyMetadata from '../utils/modifyMetadata.js'
 import getFiles from '../utils/readFiles.js'
+import updateExportMetadata from '../utils/updateExportMetadata.js'
 
 export default async function storage() {
   // * Getting firebase project id
@@ -23,7 +24,10 @@ export default async function storage() {
   const spinner = ora('Importing data').start()
 
   // ? Creating "firebase-export-metadata.json"
-  createFirebaseExportFile()
+  await createFirebaseExportFile()
+  await updateExportMetadata('storage', {
+    path: 'storage_export',
+  })
 
   // ? Creating "dir/buckets.json"
   createBucketFile(projectId)
@@ -41,10 +45,9 @@ export default async function storage() {
   let files = await getFiles(firebaseStorageBlobsPath)
 
   // * Google auth token
-  let access_token = ''
-  await execute(getGoogleAuthTokenCommand, function (output: any) {
-    access_token = output
-  })
+  // * Manage login with GCloud
+  let access_token: string | null = await handleGCPLogin()
+
   if (!access_token) {
     return console.error(
       '❌ Unable to find gcloud access token. please login to gcloud with "gcloud auth login"'
