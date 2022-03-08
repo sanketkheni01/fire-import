@@ -8,7 +8,7 @@ import {
   GCPLogin,
   setGCPProjectId,
   StartFirebaseEmulatorCommand,
-} from '../Constants/commands.js'
+} from '../Constants/index.js'
 
 async function firestore() {
   // ? Get the firebase project_id
@@ -38,6 +38,7 @@ async function firestore() {
     )
     console.log(chalk.black.bgYellow(StartFirebaseEmulatorCommand))
     spinner.stop()
+    // ! Remove firestore folder from the storage server
   } else {
     spinner.fail('Import failed')
   }

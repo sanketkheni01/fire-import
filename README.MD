@@ -1,6 +1,6 @@
 ![alt text](https://github.com/sanketkheni01/fire-import/blob/master/assets/cover.jpg?raw=true)
 
-## You can import your firebase production data easily
+## Import your firebase production data easily to local firebase emulator
 
 # Requirements
 
