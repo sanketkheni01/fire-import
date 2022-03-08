@@ -18,9 +18,11 @@
 
 ## 1. Importing **firestore** data to your current firebase project directory
 
-`fire-import firestore`
+```
+fire-import firestore
+```
 
-It will ask you for `projectId`. How to get [Project Id](#project-id)?
+It will ask you for `projectId`. How to get [Project Id](#how-to-get-firebase-project-id) ?
 
 Then new browser windows will open. Choose your google account associated with firebase project.
 
@@ -30,11 +32,13 @@ Then new browser windows will open. Choose your google account associated with f
 
 ## 1. Importing **firebase storage** data to your current firebase project directory
 
-`fire-import storage`
+```
+fire-import storage
+```
 
 # FAQs
 
-## <a name="project-id"></a>How to get firebase project id?
+## How to get firebase project id?
 
 Please go to the firebase console and get the project id.
 
