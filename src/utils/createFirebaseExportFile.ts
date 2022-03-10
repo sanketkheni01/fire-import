@@ -6,9 +6,6 @@ export default async function createFirebaseExportFile() {
   // ! remove firebase storage and use this function only for creating file
   let firebaseObj = {
     version: null,
-    storage: {
-      path: 'storage_export',
-    },
   }
 
   await execute('firebase --version', function (output: any) {
