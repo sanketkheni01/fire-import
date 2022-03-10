@@ -16,6 +16,12 @@
 
 # Usage
 
+## First Install the `fire-import` cli
+
+```
+npm i -g fire-import
+```
+
 ## 1. FireStore
 
 ```
