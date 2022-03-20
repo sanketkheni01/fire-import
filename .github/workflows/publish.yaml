@@ -21,6 +21,6 @@ jobs:
       - name: '🛠️ build'
         run: npm run build
       - name: '📦 npm'
-        run: npm version patch && npm publish
+        run: git config --global user.email "sanketkheni.pro@gmail.com" &&  git config --global user.name "sanket kheni" && npm version patch && npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
