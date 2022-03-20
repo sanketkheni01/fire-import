@@ -2,6 +2,7 @@ import fs from 'fs-extra'
 import createFirebaseExportFile from './createFirebaseExportFile.js'
 
 export default async function updateExportMetadata(key: string, value: any) {
+	// check the file exists
 	let isFileExists = await fs.pathExists(
 		'./firebaseExport/firebase-export-metadata.json'
 	)

@@ -1,49 +1,49 @@
 {
-  "name": "fire-import",
-  "version": "1.1.3",
-  "description": "Import your firebase data to your local firebase emulators",
-  "main": "./dist/index.js",
-  "scripts": {
-    "test": "test",
-    "watch": "tsc --watch",
-    "build": "tsc",
-    "dev": "tsc --watch && npm i -g",
-    "npm-publish": "npm version patch && tsc && npm publish"
-  },
-  "author": "sanket kheni",
-  "license": "MIT",
-  "dependencies": {
-    "@types/fs-extra": "^9.0.13",
-    "@yarnpkg/shell": "^3.2.0",
-    "axios": "^0.26.0",
-    "chalk": "^5.0.0",
-    "cli-spinners": "^2.6.1",
-    "commander": "^9.0.0",
-    "fs-extra": "^10.0.1",
-    "ora": "^6.1.0",
-    "prompt": "^1.2.2",
-    "typescript": "^4.5.5"
-  },
-  "keywords": [
-    "firebase",
-    "firebase-emulator",
-    "firestore",
-    "firebase-storage"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sanketkheni01/fire-import.git"
-  },
-  "homepage": "https://github.com/sanketkheni01/fire-import",
-  "bugs": {
-    "url": "https://github.com/sanketkheni01/fire-import/issues"
-  },
-  "bin": {
-    "fire-import": "./dist/index.js"
-  },
-  "type": "module",
-  "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@types/prompt": "^1.1.2"
-  }
+	"name": "fire-import",
+	"version": "1.1.4",
+	"description": "Import your firebase data to your local firebase emulators",
+	"main": "./dist/index.js",
+	"scripts": {
+		"test": "test",
+		"watch": "tsc --watch",
+		"build": "tsc",
+		"dev": "tsc --watch && npm i -g",
+		"npm-publish": "npm version patch && tsc && npm publish"
+	},
+	"author": "sanket kheni",
+	"license": "MIT",
+	"dependencies": {
+		"@types/fs-extra": "^9.0.13",
+		"@yarnpkg/shell": "^3.2.0",
+		"axios": "^0.26.0",
+		"chalk": "^5.0.0",
+		"cli-spinners": "^2.6.1",
+		"commander": "^9.0.0",
+		"fs-extra": "^10.0.1",
+		"ora": "^6.1.0",
+		"prompt": "^1.2.2",
+		"typescript": "^4.5.5"
+	},
+	"keywords": [
+		"firebase",
+		"firebase-emulator",
+		"firestore",
+		"firebase-storage"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sanketkheni01/fire-import.git"
+	},
+	"homepage": "https://github.com/sanketkheni01/fire-import",
+	"bugs": {
+		"url": "https://github.com/sanketkheni01/fire-import/issues"
+	},
+	"bin": {
+		"fire-import": "./dist/index.js"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@types/node": "^17.0.21",
+		"@types/prompt": "^1.1.2"
+	}
 }
