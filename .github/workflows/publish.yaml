@@ -16,7 +16,11 @@ jobs:
         with:
           node-version: '16.x'
           registry: 'registry.npmjs.org'
+      - name: '📦 depen'
+        run: npm install
+      - name: '🛠️ build'
+        run: npm run build
       - name: '📦 npm'
-        run: npm publish
+        run: npm version patch && npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
