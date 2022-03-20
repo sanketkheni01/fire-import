@@ -3,7 +3,6 @@ import chalk from 'chalk'
 import fs from 'fs-extra'
 import ora from 'ora'
 import path from 'path'
-import prompt from 'prompt'
 import {
 	firebaseStorageBlobsPath,
 	firebaseStorageMetadataPath,
@@ -11,6 +10,7 @@ import {
 } from '../Constants/index.js'
 import createBucketFile from '../utils/createBucketFile.js'
 import execute from '../utils/execute.js'
+import getProjectId from '../utils/getProjectId.js'
 import handleGCPLogin from '../utils/handleGCPLogin.js'
 import modifyMetadata from '../utils/modifyMetadata.js'
 import getFiles from '../utils/readFiles.js'
@@ -18,7 +18,7 @@ import updateExportMetadata from '../utils/updateExportMetadata.js'
 
 export default async function storage() {
 	// * Getting firebase project id
-	const { projectId }: { projectId: string } = await prompt.get(['projectId'])
+	const projectId = await getProjectId()
 
 	const spinner = ora('Importing data').start()
 
