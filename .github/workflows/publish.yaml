@@ -11,11 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: '🚀 node'
-        uses: actions/setup-node@v2
+      - name: 'Automated Version Bump'
+        uses: 'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          node-version: '16.x'
-          registry: 'registry.npmjs.org'
+          minor-wording: 'add,Adds,new'
+          major-wording: 'MAJOR,cut-major'
+          patch-wording:
+            'patch,fixes' # Providing patch-wording will override commits
+            # defaulting to a patch bump.
+          rc-wording: 'RELEASE,alpha'
       - name: '📦 depen'
         run: npm install
       - name: '🛠️ build'
