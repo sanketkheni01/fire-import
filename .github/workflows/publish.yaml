@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
       - name: 'Automated Version Bump'
         uses: 'phips28/gh-action-bump-version@master'
         env:
@@ -26,7 +30,8 @@ jobs:
         run: npm install
       - name: '🛠️ build'
         run: npm run build
+      - run: npm ci
       - name: '📦 npm'
         run: git config --global user.email "sanketkheni.pro@gmail.com" &&  git config --global user.name "sanket kheni" && npm publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
