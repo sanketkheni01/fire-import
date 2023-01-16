@@ -69,8 +69,8 @@ export default async function storage() {
 
 	// ? Creating metadata json files forEach file in blob folder
 	for (let filepath of files) {
-		let file_name = filepath.replace(Bucket_folder + '\\', '')
-		let file_name_uri = file_name.replaceAll('\\', '%2F')
+		let file_name = filepath.replace(Bucket_folder + '/', '')
+		let file_name_uri = file_name.replaceAll('/', '%2F')
 
 		// * Axios GET request
 		const result = await instance.get(file_name_uri, {
@@ -80,7 +80,7 @@ export default async function storage() {
 		// `./firebaseExport/storage_export/metadata/mydemop-450.appspot.com/`
 		fs.ensureDirSync(
 			`${firebaseStorageMetadataPath}${projectId}.appspot.com/` +
-				file_name.substring(0, file_name.lastIndexOf('\\') + 1)
+				file_name.substring(0, file_name.lastIndexOf('/') + 1)
 		)
 		// ? Modifying google cloud metadata to firebase metadata
 		let modified_metadata = modifyMetadata(result.data)
