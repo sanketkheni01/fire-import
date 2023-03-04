@@ -8,10 +8,10 @@ export default async function test() {
     `./firebaseExport/storage_export/blobs/${'de-sd2291d0'}.appspot.com`
   )
   for (let filepath of files) {
-    let file_name = filepath.replace(__dirname + '\\', '')
+    let file_name = filepath.replace(__dirname + path.sep, '')
     fs.ensureDirSync(
       './firebaseExport/storage_export/metadata/' +
-        file_name.substring(0, file_name.lastIndexOf('\\') + 1)
+        file_name.substring(0, file_name.lastIndexOf(path.sep) + 1)
     )
     fs.writeJsonSync(
       './firebaseExport/storage_export/metadata/' + file_name + '.json',
