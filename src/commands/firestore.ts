@@ -41,11 +41,11 @@ async function firestore() {
 	if (exitCodeImport === 0) {
 		await execute(deleteFireStoreFolderBucket(projectId), () => {})
 		spinner.succeed('Import successful')
-		console.log(chalk.yellowBright('FireStore data imported 🔥🔥🔥🎉🎉🎉'))
+		console.log(chalk.greenBright('Firestore data imported 🎉'))
 		console.log(
-			chalk.green('Run following command to import data to firebase emulator')
+			chalk.cyanBright('Run following command to import data to Firebase emulator')
 		)
-		console.log(chalk.black.bgYellow(StartFirebaseEmulatorCommand))
+		console.log(chalk.bold.cyan(StartFirebaseEmulatorCommand))
 		spinner.stop()
 		// ! Remove firestore folder from the storage server
 	} else {
